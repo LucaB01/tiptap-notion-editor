@@ -4,6 +4,8 @@ const typescript = require('@rollup/plugin-typescript')
 const postcss = require('rollup-plugin-postcss')
 const dts = require('rollup-plugin-dts').default
 const peerDepsExternal = require('rollup-plugin-peer-deps-external')
+const alias = require('@rollup/plugin-alias')
+const path = require('path')
 
 const packageJson = require('./package.json')
 
@@ -36,6 +38,11 @@ module.exports = [
         inject: {
           insertAt: 'top',
         },
+      }),
+      alias({
+        entries: [
+          { find: '@', replacement: path.resolve(__dirname, 'src') }
+        ]
       }),
     ],
   },
