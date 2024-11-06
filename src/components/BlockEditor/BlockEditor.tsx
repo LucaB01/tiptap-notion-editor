@@ -17,6 +17,8 @@ import { ContentItemMenu } from '../menus/ContentItemMenu'
 import { useSidebar } from '@/hooks/useSidebar'
 import { Doc as YDoc } from 'yjs'
 
+export interface BlockEditorProps {}
+
 export const BlockEditor = ({}: {}) => {
   const menuContainerRef = useRef(null)
   const ydoc = useMemo(() => new YDoc(), [])

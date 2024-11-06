@@ -9,8 +9,8 @@
     "dist"
   ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
