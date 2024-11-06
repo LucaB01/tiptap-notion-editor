@@ -1,3 +1,4 @@
+import React from 'react'
 import TiptapTableHeader from '@tiptap/extension-table-header'
 import { Plugin } from '@tiptap/pm/state'
 import { Decoration, DecorationSet } from '@tiptap/pm/view'
